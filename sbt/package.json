@@ -1,0 +1,20 @@
+{
+	"name": "sbt",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": ">=0.9.0-pre.1"
+	},
+	"publisher": "none",
+	"contributes": {
+		"languages": [{
+			"id": "sbt",
+			"aliases": ["Simple Build Tool", "sbt"],
+			"extensions": [".sbt"]
+		}],
+		"grammars": [{
+			"language": "sbt",
+			"scopeName": "source.sbt",
+			"path": "./syntaxes/sbt.tmLanguage"
+		}]
+	}
+}
