@@ -1,0 +1,176 @@
+{
+  "Case class scaffolding": {
+    "prefix": "cc",
+    "body": [
+      "class ${1:Class}(${2/(\S+\s*:)/val $1/g}) {",
+      "  ${3}",
+      "}"
+    ],
+    "description": "Case class scaffolding"
+  },
+  "Case class with object scaffolding": {
+    "prefix": "cco",
+    "body": [
+      "class ${1:Class}(${2/(\S+\s*:)/val $1/g}) {",
+      "  ${3}",
+      "}",
+      "object $1 {",
+      "	 def apply(${2:arguments}): $1 = new $1(${2/(\S+)\s*:[^,]+/$1/g})",
+      "}"
+    ],
+    "description": "Case class scaffolding"
+  },
+  "Print to console": {
+    "prefix": "prl",
+    "body": [
+      "println('$1');"
+    ],
+    "description": "Log output to console"
+  },
+  /*
+  If expression snippets
+  */
+  "If expression": {
+    "prefix": "if",
+    "body": [
+      "if (${1})",
+      "  ${0}"
+    ],
+    "description": "If expression"
+  },
+  "If not expression": {
+    "prefix": "ifn",
+    "body": [
+      "if (!${1})",
+      "  ${0}"
+    ],
+    "description": "If not expression"
+  },
+  "If else expression": {
+    "prefix": "ife",
+    "body": [
+      "if (${1})",
+      "  ${2}",
+      "else",
+      "  ${0}"
+    ],
+    "description": "If else expression"
+  },
+  "If else if expression": {
+    "prefix": "ifeif",
+    "body": [
+      "if (${1})",
+      "  ${2}",
+      "else if (${3})",
+      "  ${0}"
+    ],
+    "description": "If else if expression"
+  },
+  "Else if expression": {
+    "prefix": "eif",
+    "body": [
+      "else if (${3})",
+      "  ${0}"
+    ],
+    "description": "Else if expression"
+  },
+  /*
+  While loop expression snippets
+  */
+  "While expression": {
+    "prefix": "wh",
+    "body": [
+      "while (${1:obj}) {",
+      "  ${0}",
+      "}"
+    ],
+    "description": "While expression"
+  },
+  /*
+  For loop expression snippets
+  */
+  "For loop classic expression": {
+    "prefix": "for",
+    "body": [
+      "for (${1:item} <- ${2:obj}) {",
+      "  ${0}",
+      "}"
+    ],
+    "description": "For loop classic expression"
+  },
+  "For loop indexed expression": {
+    "prefix": "fori",
+    "body": [
+      "for (${1:i} <- ${2:0} to ${3:obj}.length) {",
+      "  ${0}",
+      "}"
+    ],
+    "description": "For loop indexed expression"
+  },
+  "For comprehension": {
+    "prefix": "fory",
+    "body": [
+      "for {",
+      "  ${1:item} <- ${2:obj}",
+      "} yield ${0}"
+    ],
+    "description": "For comprehension"
+  },
+  /*
+  Try expression snippets
+  */
+  "Try expression": {
+    "prefix": "try",
+    "body": [
+      "try {",
+      "  ${1}",
+      "} catch {",
+      "  case e: ${2} => ${3}",
+      "} finally {",
+      "  ${0}",
+      "}"
+    ],
+    "description": "Try expression"
+  },
+  /*
+  Match expression snippets
+  */
+  "Match expression": {
+    "prefix": "match",
+    "body": [
+      "${1:obj} match {",
+      "  case ${2:e} => ${3}",
+      "  case _ => ${0}",
+      "}"
+    ],
+    "description": "Match expression"
+  },
+  "Case expression": {
+    "prefix": "case",
+    "body": [
+      "case ${1:value} => ${0}"
+    ],
+    "description": "Case expression"
+  },
+  "Function expression": {
+    "prefix": "def",
+    "body": [
+      "def ${1:name}(${2:arg}) = ${0:}"
+    ],
+    "description": "Function expression"
+  },
+  "Private function expression": {
+    "prefix": "prdef",
+    "body": [
+      "private def ${1:name}(${2:arg}) = ${0:}"
+    ],
+    "description": "Private function expression"
+  },
+  "Override function expression": {
+    "prefix": "ovdef",
+    "body": [
+      "override def ${1:name}(${2:arg}) = ${0:}"
+    ],
+    "description": "Override function expression"
+  },
+}
