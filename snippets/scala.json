@@ -2,7 +2,7 @@
   "Case class scaffolding": {
     "prefix": "cc",
     "body": [
-      "class ${1:Class}(${2/(\S+\s*:)/val $1/g}) {",
+      "class ${1:Class}(${2}) {",
       "  ${3}",
       "}"
     ],
@@ -11,11 +11,11 @@
   "Case class with object scaffolding": {
     "prefix": "cco",
     "body": [
-      "class ${1:Class}(${2/(\S+\s*:)/val $1/g}) {",
+      "class ${1:Class}(${2}) {",
       "  ${3}",
       "}",
       "object $1 {",
-      "	 def apply(${2:arguments}): $1 = new $1(${2/(\S+)\s*:[^,]+/$1/g})",
+      "	 def apply(${2}): $1 = new $1(${2})",
       "}"
     ],
     "description": "Case class scaffolding"
@@ -27,9 +27,6 @@
     ],
     "description": "Log output to console"
   },
-  /*
-  If expression snippets
-  */
   "If expression": {
     "prefix": "if",
     "body": [
@@ -74,9 +71,6 @@
     ],
     "description": "Else if expression"
   },
-  /*
-  While loop expression snippets
-  */
   "While expression": {
     "prefix": "wh",
     "body": [
@@ -86,9 +80,6 @@
     ],
     "description": "While expression"
   },
-  /*
-  For loop expression snippets
-  */
   "For loop classic expression": {
     "prefix": "for",
     "body": [
@@ -116,9 +107,6 @@
     ],
     "description": "For comprehension"
   },
-  /*
-  Try expression snippets
-  */
   "Try expression": {
     "prefix": "try",
     "body": [
@@ -132,9 +120,6 @@
     ],
     "description": "Try expression"
   },
-  /*
-  Match expression snippets
-  */
   "Match expression": {
     "prefix": "match",
     "body": [
@@ -172,5 +157,24 @@
       "override def ${1:name}(${2:arg}) = ${0:}"
     ],
     "description": "Override function expression"
+  },
+  "Enumeration": {
+    "prefix": "enum",
+    "body": [
+      "object ${1:MyEnumeration} extends Enumeration {",
+      "  type $1 = Value",
+      "  val ${2:${3:MyEnumeration1}, ${4:MyEnumeration2}} = Value",
+      "}",
+      "${5:import $1._}",
+      "${0}"
+    ],
+    "description": "Enumeration"
+  },
+  "Import mutable": {
+    "prefix": "mutbl",
+    "body": [
+      "import scala.collection.{ mutable, immutable, generic }"
+    ],
+    "description": "Import mutable"
   },
 }
