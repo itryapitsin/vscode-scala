@@ -1,10 +1,10 @@
 {
-	"name": "scala",
-	"version": "0.0.1",
+	"name": "Scala",
+	"version": "0.1.1",
 	"engines": {
 		"vscode": ">=0.9.0-pre.1"
 	},
-	"publisher": "none",
+	"publisher": "itryapitsin",
 	"contributes": {
 		"languages": [{
 			"id": "scala",

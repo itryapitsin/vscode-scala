@@ -1,0 +1,7 @@
+{
+  "name": "ScalaSnippets",
+  "publisher": "itryapitsin",
+  "description": "Code snippets for Scala",
+  "version": "0.1.1",
+  "engines": { "vscode": "*" }
+}
