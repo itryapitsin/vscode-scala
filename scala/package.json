@@ -1,20 +1,30 @@
 {
-	"name": "Scala",
-	"version": "0.1.1",
-	"engines": {
-		"vscode": ">=0.9.0-pre.1"
-	},
-	"publisher": "itryapitsin",
-	"contributes": {
-		"languages": [{
-			"id": "scala",
-			"aliases": ["Scala", "scala"],
-			"extensions": [".scala"]
-		}],
-		"grammars": [{
-			"language": "scala",
-			"scopeName": "source.scala",
-			"path": "./syntaxes/scala.tmLanguage"
-		}]
-	}
+  "name": "Scala",
+  "version": "0.1.2",
+  "description": "Scala support for Visual Studio Code",
+  "engines": {
+    "vscode": ">=0.9.0-pre.1"
+  },
+  "publisher": "itryapitsin",
+  "contributes": {
+    "languages": [
+      {
+        "id": "scala",
+        "aliases": [
+          "Scala",
+          "scala"
+        ],
+        "extensions": [
+          ".scala"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "scala",
+        "scopeName": "source.scala",
+        "path": "./syntaxes/scala.tmLanguage"
+      }
+    ]
+  }
 }
