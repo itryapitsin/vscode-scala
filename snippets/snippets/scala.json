@@ -2,7 +2,7 @@
   "Case class scaffolding": {
     "prefix": "cc",
     "body": [
-      "class ${1:Class}(${2}) {",
+      "case class ${1:Class}(${2}) {",
       "  ${3}",
       "}"
     ],
@@ -11,7 +11,7 @@
   "Case class with object scaffolding": {
     "prefix": "cco",
     "body": [
-      "class ${1:Class}(${2}) {",
+      "case class ${1:Class}(${2}) {",
       "  ${3}",
       "}",
       "object $1 {",
@@ -176,5 +176,5 @@
       "import scala.collection.{ mutable, immutable, generic }"
     ],
     "description": "Import mutable"
-  },
+  }
 }
