@@ -558,7 +558,7 @@
 					<key>begin</key>
 					<string>"""</string>
 					<key>end</key>
-					<string>"""</string>
+					<string>"{3,}</string>
 					<key>name</key>
 					<string>string.quoted.triple.scala</string>
 				</dict>
