@@ -558,9 +558,48 @@
 					<key>begin</key>
 					<string>"""</string>
 					<key>end</key>
-					<string>"""</string>
+					<string>"{3,}</string>
 					<key>name</key>
 					<string>string.quoted.triple.scala</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>s"""</string>
+					<key>end</key>
+					<string>"{3,}</string>
+					<key>name</key>
+					<string>string.quoted.triple.scala</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>\$([a-zA-Z$_][a-zA-Z0-9$_]*)\s*</string>
+							<key>name</key>
+							<string>variable.name</string>
+						</dict>
+						<dict>
+							<key>captures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>variable.name</string>
+								</dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>string.quoted.triple.scala</string>
+								</dict>
+								<key>3</key>
+								<dict>
+									<key>name</key>
+									<string>variable.name</string>
+								</dict>
+							</dict>
+							<key>match</key>
+							<string>(\${)([a-zA-Z$_][a-zA-Z0-9$_]*)(})\s*</string>
+						</dict>
+					</array>
 				</dict>
 				<dict>
 					<key>begin</key>
@@ -582,6 +621,48 @@
 							<string>\\.</string>
 							<key>name</key>
 							<string>constant.character.escape.scala</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>\\$
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(?&lt;!\\)s"</string>
+					<key>end</key>
+					<string>"</string>
+					<key>name</key>
+					<string>string.quoted.double.scala</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>\$([a-zA-Z$_][a-zA-Z0-9$_]*)\s*</string>
+							<key>name</key>
+							<string>variable.name</string>
+						</dict>
+						<dict>
+							<key>captures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>variable.name</string>
+								</dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>string.quoted.double.scala</string>
+								</dict>
+								<key>3</key>
+								<dict>
+									<key>name</key>
+									<string>variable.name</string>
+								</dict>
+							</dict>
+							<key>match</key>
+							<string>(\${)([a-zA-Z$_][a-zA-Z0-9$_]*)(})\s*</string>
 						</dict>
 					</array>
 				</dict>
