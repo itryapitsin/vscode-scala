@@ -11,7 +11,7 @@ Mac $HOME/.vscode/extensions
 Linux $HOME/.vscode/extensions
 ```
 
-Copy snippets folder to 
+Copy the contents of the snippets folder to 
 ```bash
 Mac $HOME/Library/Application Support/Code/User/snippets
 ```
