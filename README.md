@@ -1,3 +1,5 @@
+[![Donate](https://img.shields.io/badge/donorbox-donate-blue.svg)](https://donorbox.org/scala-for-visual-studio-support?recurring=true) 
+
 # vscode-scala
 Scala &amp; SBT colorizer for the Visual Studio Code
 
