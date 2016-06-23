@@ -352,7 +352,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>(?&lt;=[\n;])</string>
+			<string>((\w|\.)+)_*;*</string>
 			<key>name</key>
 			<string>meta.import.scala</string>
 			<key>patterns</key>
