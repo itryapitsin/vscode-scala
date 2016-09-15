@@ -16,7 +16,8 @@
         ],
         "extensions": [
           ".scala"
-        ]
+        ],
+        "configuration": "./scala.configuration.json"
       }
     ],
     "grammars": [
